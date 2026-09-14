@@ -1,0 +1,22 @@
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+*.tmp
+*.temp
+
+# Editor / IDE directories
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Local scratch and debug logs
+scratch/
+*.log
+
+# Server error logs
+error_log
+php_errors.log
