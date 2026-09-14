@@ -168,9 +168,7 @@ $qrPosY      = isset($_GET['qr_pos_y']) ? (float)$_GET['qr_pos_y'] : (float)($te
 $qrSize      = isset($_GET['qr_size']) ? (int)$_GET['qr_size'] : (int)($template['qr_size'] ?? 75);
 
 // Dedicated Verification URL
-$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
-$host = $_SERVER['HTTP_HOST'] ?? 'localhost';
-$verifyUrl = $protocol . '://' . $host . '/certificate/public/verify.php?token=' . urlencode($cert_token);
+$verifyUrl = (function_exists('getAppBaseUrl') ? getAppBaseUrl() : '') . '/public/verify.php?token=' . urlencode($cert_token);
 
 $page_title = 'Certificate Preview - CertificateHub';
 $active_page = 'certificates';

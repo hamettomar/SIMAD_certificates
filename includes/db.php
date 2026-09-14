@@ -11,6 +11,33 @@ if (!defined('DB_PASS')) define('DB_PASS', '');
 if (!defined('DB_CHARSET')) define('DB_CHARSET', 'utf8mb4');
 
 /**
+ * Auto-detect Base URL for both Localhost (e.g. http://localhost/certificate) and Live Hosting (e.g. https://domain.com)
+ *
+ * @return string
+ */
+function getAppBaseUrl(): string {
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+    $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+    $script = $_SERVER['SCRIPT_NAME'] ?? '';
+    // Strip subdirectories like /admin/ or /public/ or /includes/ to obtain project base
+    $basePath = preg_replace('#/(admin|public|includes)/.*$#i', '', $script);
+    $basePath = preg_replace('#/index\.php$#i', '', $basePath);
+    return rtrim($protocol . '://' . $host . $basePath, '/');
+}
+
+/**
+ * Auto-detect Base Path (e.g. '/certificate' or '')
+ *
+ * @return string
+ */
+function getAppBasePath(): string {
+    $script = $_SERVER['SCRIPT_NAME'] ?? '';
+    $basePath = preg_replace('#/(admin|public|includes)/.*$#i', '', $script);
+    $basePath = preg_replace('#/index\.php$#i', '', $basePath);
+    return rtrim($basePath, '/');
+}
+
+/**
  * Returns a shared PDO instance (Singleton pattern)
  * 
  * @return PDO

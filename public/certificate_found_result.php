@@ -110,9 +110,7 @@ $doc_hash = htmlspecialchars($cert['document_hash']);
 $cohortId = (int)$cert['cohort_id'];
 
 // Dedicated Institutional Verification URL
-$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
-$host = $_SERVER['HTTP_HOST'] ?? 'localhost';
-$verifyUrl = $protocol . '://' . $host . '/certificate/public/verify.php?token=' . urlencode($cert['certificate_token']);
+$verifyUrl = (function_exists('getAppBaseUrl') ? getAppBaseUrl() : '') . '/public/verify.php?token=' . urlencode($cert['certificate_token']);
 
 // 1-Click "Add to LinkedIn" Deep Link (SIMAD University)
 $issueTimestamp = strtotime($cert['issued_at'] ?? $cert['issue_date'] ?? 'now');

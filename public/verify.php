@@ -30,13 +30,9 @@ if (!empty($query_token)) {
 }
 
 // Verification URL for QR code encoding
-$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
-$host = $_SERVER['HTTP_HOST'] ?? 'localhost';
-$requestUri = $_SERVER['REQUEST_URI'] ?? '/certificate/public/verify.php';
-$phpSelf = $_SERVER['PHP_SELF'] ?? '/certificate/public/verify.php';
 $verifyUrl = !empty($cert['certificate_token']) 
-    ? $protocol . '://' . $host . dirname($phpSelf) . '/verify.php?token=' . urlencode($cert['certificate_token']) 
-    : $protocol . '://' . $host . $requestUri;
+    ? (function_exists('getAppBaseUrl') ? getAppBaseUrl() : '') . '/public/verify.php?token=' . urlencode($cert['certificate_token']) 
+    : (function_exists('getAppBaseUrl') ? getAppBaseUrl() : '') . '/public/verify.php';
 
 $page_title = $isValid 
     ? 'Official Verification: ' . htmlspecialchars($cert['full_name']) . ' - SIMAD University' 

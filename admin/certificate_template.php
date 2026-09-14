@@ -1302,7 +1302,7 @@ include __DIR__ . '/../includes/header.php';
         return;
       }
       stageQr.innerHTML = '';
-      const sampleUrl = window.location.origin + '/certificate/public/verify.php?token=SAMPLE-CERT-VERIFY';
+      const sampleUrl = '<?= function_exists("getAppBaseUrl") ? getAppBaseUrl() : "" ?>/public/verify.php?token=SAMPLE-CERT-VERIFY';
       new QRCode(stageQr, {
         text: sampleUrl,
         width: 256,

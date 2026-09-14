@@ -160,8 +160,6 @@ include __DIR__ . '/../includes/head.php';
           <span class="material-symbols-outlined text-[14px]">verified_user</span>
           Public Verification Ledger
         </a>
-        <span class="hidden sm:inline">•</span>
-        <a href="../admin/organizer_sign_in.php" class="text-primary hover:underline">Organizer Sign In</a>
       </div>
     </div>
   </main>

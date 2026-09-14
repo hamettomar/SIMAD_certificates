@@ -81,9 +81,7 @@ $bulkEligibleCerts = dbFetchAll("
 
 $bulkCertsCount = count($bulkEligibleCerts);
 
-$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
-$host = $_SERVER['HTTP_HOST'] ?? 'localhost';
-$verifyBaseUrl = $protocol . '://' . $host . '/certificate/public/verify.php?token=';
+$verifyBaseUrl = (function_exists('getAppBaseUrl') ? getAppBaseUrl() : '') . '/public/verify.php?token=';
 ?>
 
 <!-- Bulk Certificate Download Modal -->

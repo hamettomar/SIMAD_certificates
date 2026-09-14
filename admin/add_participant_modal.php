@@ -157,7 +157,7 @@ include __DIR__ . '/../includes/header.php';
           </label>
           <div class="relative flex items-center">
             <span class="material-symbols-outlined absolute left-3 text-[18px] text-outline pointer-events-none">badge</span>
-            <input class="w-full h-10 pl-9 pr-space-md rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline border border-transparent focus:border-primary-container focus:bg-surface-container-lowest focus:outline-none transition-colors" id="fullNameInput" name="fullName" placeholder="e.g. Alex Morgan" required type="text" value="<?= htmlspecialchars($fullName) ?>"/>
+            <input class="w-full h-10 pl-9 pr-space-md rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline border border-transparent focus:border-primary-container focus:bg-surface-container-lowest focus:outline-none transition-colors" id="fullNameInput" name="fullName" placeholder="Ahmed Omar" required type="text" value="<?= htmlspecialchars($fullName) ?>"/>
           </div>
         </div>
 
@@ -169,7 +169,7 @@ include __DIR__ . '/../includes/header.php';
           </label>
           <div class="relative flex items-center">
             <span class="material-symbols-outlined absolute left-3 text-[18px] text-outline pointer-events-none">mail</span>
-            <input class="w-full h-10 pl-9 pr-space-md rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline border border-transparent focus:border-primary-container focus:bg-surface-container-lowest focus:outline-none transition-colors" id="emailInput" name="email" placeholder="alex.morgan@example.com" required type="email" value="<?= htmlspecialchars($email) ?>"/>
+            <input class="w-full h-10 pl-9 pr-space-md rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline border border-transparent focus:border-primary-container focus:bg-surface-container-lowest focus:outline-none transition-colors" id="emailInput" name="email" placeholder="ahmed@example.com" required type="email" value="<?= htmlspecialchars($email) ?>"/>
           </div>
         </div>
 
@@ -230,8 +230,6 @@ include __DIR__ . '/../includes/header.php';
         <!-- Modal Footer Strip -->
         <div class="px-0 py-space-sm flex items-center justify-between gap-space-sm border-t border-surface-container-low mt-space-sm">
           <div class="flex items-center gap-1.5 font-caption text-caption text-secondary">
-            <span class="w-2 h-2 rounded-full bg-tertiary"></span>
-            <span>Real-time issuance active</span>
           </div>
           <div class="flex items-center gap-space-sm">
             <a href="participants_management.php" class="h-9 px-space-md rounded-lg font-label-md text-label-md text-secondary hover:text-on-surface hover:bg-surface-container transition-colors inline-flex items-center justify-center">

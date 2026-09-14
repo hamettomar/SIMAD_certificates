@@ -38,8 +38,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <script>
     if (typeof QRCode === 'undefined') {
-      document.write('<script src="/certificate/public/js/qrcode.min.js"><\/script>');
+      const basePath = '<?= function_exists("getAppBasePath") ? getAppBasePath() : "" ?>';
+      document.write('<script src="' + basePath + '/public/js/qrcode.min.js"><\/script>');
     }
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
   <script id="tailwind-config">
