@@ -54,12 +54,7 @@ include __DIR__ . '/../includes/head.php';
           <span class="font-caption text-[10px] text-outline uppercase tracking-wider font-medium">Official Institutional Registry</span>
         </div>
       </div>
-      <div class="flex items-center gap-2">
-        <span class="inline-flex items-center gap-1 text-caption text-outline font-medium">
-          <span class="material-symbols-outlined text-[16px] <?= $isValid ? 'text-tertiary' : ($isRevoked ? 'text-error' : 'text-outline') ?>">lock</span>
-          Public Ledger
-        </span>
-      </div>
+
     </div>
   </header>
 
@@ -93,10 +88,6 @@ include __DIR__ . '/../includes/head.php';
                 <img src="../simad_university_logo.png" alt="SIMAD University" class="w-full h-full object-contain">
               </div>
               <div class="flex flex-col">
-                <div class="inline-flex items-center justify-center sm:justify-start gap-1">
-                  <span class="font-label-sm text-[11px] font-bold uppercase tracking-widest text-emerald-200">Authentic Record</span>
-                  <span class="material-symbols-outlined text-[15px] text-emerald-300">check_circle</span>
-                </div>
                 <h1 class="font-headline-lg text-headline-lg font-bold tracking-tight text-white mt-0.5">
                   Verified Official Credential
                 </h1>

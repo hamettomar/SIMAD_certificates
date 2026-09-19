@@ -19,9 +19,9 @@
 -- Current Database: `certificate_hub`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `certificate_hub` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `u264887221_shahado_hub` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci */;
 
-USE `certificate_hub`;
+USE `u264887221_shahado_hub`;
 
 --
 -- Table structure for table `admins`

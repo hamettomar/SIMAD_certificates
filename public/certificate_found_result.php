@@ -340,7 +340,7 @@ include __DIR__ . '/../includes/head.php';
               <div class="flex flex-col sm:col-span-2 p-3 sm:p-3.5 bg-surface-container-lowest rounded-lg border border-surface-container/60">
                 <span class="text-[11px] uppercase text-outline tracking-wider font-bold flex items-center gap-1.5">
                   <img src="../simad_university_logo.png" alt="SIMAD" class="w-4 h-4 object-contain">
-                  Program / Workshop Title
+                  Program
                 </span>
                 <span class="text-base sm:text-headline-sm font-bold text-on-surface mt-1 leading-snug break-words"><?= $course_title ?></span>
               </div>

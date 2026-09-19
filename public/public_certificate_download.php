@@ -94,11 +94,6 @@ include __DIR__ . '/../includes/head.php';
                   <img src="../simad_university_logo.png" alt="SIMAD" class="w-4 h-4 object-contain">
                   <span>SIMAD University</span>
                 </span>
-                <span>•</span>
-                <span class="inline-flex items-center gap-1">
-                  <span>Instructor:</span>
-                  <strong class="text-on-surface font-medium" id="matchInstructor">Lead Instructor</strong>
-                </span>
               </div>
             </div>
 
@@ -160,6 +155,7 @@ include __DIR__ . '/../includes/head.php';
           <span class="material-symbols-outlined text-[14px]">verified_user</span>
           Public Verification Ledger
         </a>
+
       </div>
     </div>
   </main>
